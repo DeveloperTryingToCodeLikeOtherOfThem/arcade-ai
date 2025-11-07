@@ -108,18 +108,15 @@ class Prompt extends game.Prompt {
  }
 
  //% blockId="game_prompt_chat"
- //% block="chat with AI $message $answerLength %theme=getPromptTheme" weight=100
- //% message.shadow=text 
- //% answerLength.min=1
- //% answerLength.max=24
+ //% block="chat with AI %message %answerLength || %theme=getPromptTheme()" weight=100
  //% answerLength.defl=12
-    export function chat(message: string, answerLength: number, theme: PromptTheme) {
+    export function chat(message: string, answerLength: number, theme?: PromptTheme) {
    const prompt = new Prompt(theme)
    return prompt.show(message, answerLength)
- }
+    }
 
    //% blockId="game_prompt__getPromptTheme"
-   //% block="get prompt theme %col1 %col2 %col3 %col4 %col5 %col6 %col7 %col8 %col9"
+   //% block="get prompt theme %col1 %col2 %col3 %col4 %col5 %col6 %col7 %col8 %col9" %
    //% col1.defl=1 
    //% col2.defl=3 
    //% col3.defl=5
