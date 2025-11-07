@@ -109,7 +109,6 @@ class Prompt extends game.Prompt {
 
  //% blockId="game_prompt_chat"
  //% block="chat with AI %message %answerLength || %theme=__getPromptTheme()" weight=100
- //% block="chat with AI %message %answerLength || %theme=getPromptTheme()" weight=100
  //% answerLength.defl=12
     export function chat(message: string, answerLength: number, theme?: PromptTheme) {
    const prompt = new Prompt(theme)
