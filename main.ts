@@ -1,4 +1,5 @@
 // ref from pxt_modules/libs/game/prompt.ts
+//% groups=['Prompt Chat']
 namespace game.prompt {
 const font = image.font8; // FONT8-TODO
 
@@ -108,10 +109,11 @@ class Prompt extends game.Prompt {
  }
 
  //% blockId="game_prompt_chat"
- //% block="chat with AI %message %answerLength || %theme=__getPromptTheme()" weight=100
+ //% block="chat with AI %message %answerLength" weight=100
  //% answerLength.defl=12
-    export function chat(message: string, answerLength: number, theme?: PromptTheme) {
-   const prompt = new Prompt(theme)
+    //% group="PromptChat"
+    export function chat(message: string, answerLength: number {
+   const prompt = new Prompt(__getPromptTheme(1, 3, 5, 1, 1, 7, 15, 3, 1)) // make the editor not confused
    return prompt.show(message, answerLength)
     }
 
