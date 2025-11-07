@@ -112,7 +112,7 @@ class Prompt extends game.Prompt {
  //% block="chat with AI %message %answerLength" weight=100
  //% answerLength.defl=12
     //% group="PromptChat"
-    export function chat(message: string, answerLength: number {
+    export function chat(message: string, answerLength: number) {
    const prompt = new Prompt(__getPromptTheme(1, 3, 5, 1, 1, 7, 15, 3, 1)) // make the editor not confused
    return prompt.show(message, answerLength)
     }
